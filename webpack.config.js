@@ -68,7 +68,9 @@ module.exports = [
             {
               loader: "sass-loader",
               options: {
-                importer: materialImporter
+                sassOptions: {
+                  includePaths: ["./node_modules"]
+                }
               }
             }
           ]

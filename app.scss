@@ -5,13 +5,33 @@
 @import "@material/icon-button/mdc-icon-button";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
+@import "@material/textfield/mdc-text-field";
 
 body {
   font-family: "Roboto", sans-serif;
+  color: #6b6969;
 }
 
 .container {
   padding-top: 70px;
+}
+
+.username,
+.password {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin: auto;
+}
+
+.button-container button {
+  margin: 3px;
 }
 
 .mdc-top-app-bar {
