@@ -4,11 +4,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MDC</title>
+    <link rel="shortcut icon" href="https://material.io/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <link rel="stylesheet" href="bundle.css" />
   </head>
   <body>
-    <h2>Hello World!</h2>
-    <button class="foo-button mdc-button mdc-button--raised">Great!</button>
+    <!--drawer-->
+    <aside class="mdc-drawer mdc-drawer--modal">
+      <div class="mdc-drawer__header">
+        <h3 class="mdc-drawer__title">Sabbir Ahmad</h3>
+        <h6 class="mdc-drawer__subtitle">sabbir@gskitchen.in</h6>
+      </div>
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <a
+            class="mdc-list-item mdc-list-item--activated"
+            href="#"
+            aria-current="page"
+          >
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
+              >inbox</i
+            >
+            <span class="mdc-list-item__text">Inbox</span>
+          </a>
+          <a class="mdc-list-item" href="#">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
+              >send</i
+            >
+            <span class="mdc-list-item__text">Outgoing</span>
+          </a>
+          <a class="mdc-list-item" href="#">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
+              >drafts</i
+            >
+            <span class="mdc-list-item__text">Drafts</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+    <!--end of drawer-->
+    <header class="mdc-top-app-bar mdc-top-app-bar--dense">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded"
+            id="menuButton"
+          >
+            menu</button
+          ><span class="mdc-top-app-bar__title">GS Kitchen</span>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+        >
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+            aria-label="Download"
+          >
+            search
+          </button>
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
+            aria-label="Bookmark this page"
+          >
+            account_circle
+          </button>
+        </section>
+      </div>
+    </header>
+
+    <!-- <h2 style="padding-top: 80px;">Hello World!</h2>
+    <button class="foo-button mdc-button mdc-button--raised">
+      <span class="mdc-button__label">Greate</span>
+    </button> -->
+    <div class="mdc-layout-grid container">
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop"
+          style="border: 1px dotted black;"
+        >
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell" style="border: 1px solid red;">
+              Inner 1 ha ahd flaskd fadskjfad fkk
+            </div>
+            <div class="mdc-layout-grid__cell" style="border: 1px solid red;">
+              Inner 2 ha ahd flaskd fadskjfad fkk
+            </div>
+          </div>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop"
+          style="border: 1px dotted black;"
+        >
+          <button class="foo-button mdc-button mdc-button--raised">
+            <span class="mdc-button__label">Greate</span>
+          </button>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop"
+          style="border: 1px dotted black;"
+        >
+          <h1>From div 3</h1>
+        </div>
+      </div>
+    </div>
 
     <script src="bundle.js" async></script>
   </body>

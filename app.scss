@@ -1,10 +1,24 @@
+@import "variables";
+@import "@material/layout-grid/mdc-layout-grid";
 @import "@material/button/mdc-button";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 
 body {
-  color: blue;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding-top: 70px;
+}
+
+.mdc-top-app-bar {
+  @include mdc-top-app-bar-ink-color(white);
 }
 
 .foo-button {
+  //@include mdc-button-filled-accessible($primaryColor);
   @include mdc-button-ink-color(white);
-  @include mdc-states(teal);
 }
