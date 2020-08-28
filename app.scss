@@ -5,7 +5,6 @@
 @import "@material/icon-button/mdc-icon-button";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
-@import "@material/textfield/mdc-text-field";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -38,7 +37,14 @@ body {
   @include mdc-top-app-bar-ink-color(white);
 }
 
-.foo-button {
-  //@include mdc-button-filled-accessible($primaryColor);
-  @include mdc-button-ink-color(white);
+.text-center{
+  text-align: center;
+}
+
+.social a{
+  text-decoration: none;
+}
+
+.social a:hover{
+  text-decoration: underline;
 }

@@ -1,30 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>MDC</title>
-    <link rel="shortcut icon" href="https://material.io/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="bundle.css" />
+	<title>Quflik - A beautiful Quran app</title>
+	<meta name="description" content="Quflik is a beautiful Quran app, help to explore the holy words in very deep.">
+	<link rel="shortcut icon" href="./favicon.ico" />
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Quflik",
+		  "url": "https://quflik.com",
+		  "logo": "https://quflik.com/logo.png",
+		  "sameAs": [
+			"https://www.facebook.com/quflik",
+			"https://www.twitter.com/quflik",
+			"https://www.instagram.com/quflik"
+		  ]
+		}
+		</script>
+	<style type="text/css">
+		:root{--mdc-layout-grid-margin-desktop:24px;--mdc-layout-grid-gutter-desktop:24px;--mdc-layout-grid-column-width-desktop:72px;--mdc-layout-grid-margin-tablet:16px;--mdc-layout-grid-gutter-tablet:16px;--mdc-layout-grid-column-width-tablet:72px;--mdc-layout-grid-margin-phone:16px;--mdc-layout-grid-gutter-phone:16px;--mdc-layout-grid-column-width-phone:72px}@font-face{font-family:Roboto,sans-serif;font-style:normal;font-weight:400;src:local('Arial'),local('Arial'),url(https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');font-display:swap}.mdc-layout-grid__cell--align-middle{align-self:center}.mdc-top-app-bar{background-color:#039be5;background-color:var(--mdc-theme-primary,#039be5);color:rgba(0,0,0,.87);display:-webkit-box;display:flex;position:fixed;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:justify;justify-content:space-between;box-sizing:border-box;width:100%;z-index:4}.mdc-top-app-bar__row{display:-webkit-box;display:flex;position:relative;box-sizing:border-box;width:100%;height:64px}.mdc-top-app-bar__section{display:-webkit-inline-box;display:inline-flex;-webkit-box-flex:1;flex:1 1 auto;-webkit-box-align:center;align-items:center;min-width:0;padding:8px 12px;z-index:1}.mdc-top-app-bar__section--align-start{-webkit-box-pack:start;justify-content:flex-start;-webkit-box-ordinal-group:0;order:-1}.mdc-top-app-bar__title{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:1.25rem;line-height:2rem;font-weight:500;letter-spacing:.0125em;text-decoration:inherit;text-transform:inherit;padding-left:20px;padding-right:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;z-index:1}.mdc-top-app-bar--dense .mdc-top-app-bar__row{height:48px}.mdc-top-app-bar--dense .mdc-top-app-bar__section{padding:0 4px}.mdc-top-app-bar--dense .mdc-top-app-bar__title{padding-left:12px;padding-right:0}.mdc-icon-button{display:inline-block;position:relative;box-sizing:border-box;border:none;outline:0;background-color:transparent;fill:currentColor;color:inherit;font-size:24px;text-decoration:none;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:48px;height:48px;padding:12px}.mdc-icon-button{--mdc-ripple-fg-size:0;--mdc-ripple-left:0;--mdc-ripple-top:0;--mdc-ripple-fg-scale:1;--mdc-ripple-fg-translate-end:0;--mdc-ripple-fg-translate-start:0;-webkit-tap-highlight-color:transparent}.mdc-icon-button::after,.mdc-icon-button::before{position:absolute;border-radius:50%;opacity:0;pointer-events:none;content:""}.mdc-icon-button::before{-webkit-transition:opacity 15ms linear,background-color 15ms linear;transition:opacity 15ms linear,background-color 15ms linear;z-index:1}.mdc-icon-button::after,.mdc-icon-button::before{top:calc(50% - 50%);left:calc(50% - 50%);width:100%;height:100%}.mdc-icon-button::after,.mdc-icon-button::before{background-color:#000}.mdc-icon-button:not(.mdc-ripple-upgraded)::after{-webkit-transition:opacity 150ms linear;transition:opacity 150ms linear}.mdc-drawer{border-color:rgba(0,0,0,.12);background-color:#fff;border-radius:0;z-index:6;width:256px;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;flex-shrink:0;box-sizing:border-box;height:100%;border-right-width:1px;border-right-style:solid;overflow:hidden;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1)}.mdc-drawer--modal{box-shadow:0 8px 10px -5px rgba(0,0,0,.2),0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12);left:0;right:initial;display:none;position:fixed}.mdc-drawer--modal+.mdc-drawer-scrim{background-color:rgba(0,0,0,.32)}.mdc-drawer-scrim{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:5;-webkit-transition-property:opacity;transition-property:opacity;-webkit-transition-timing-function:cubic-bezier(.4,0,.2,1);transition-timing-function:cubic-bezier(.4,0,.2,1)}body{font-family:Roboto,sans-serif;color:#6b6969}.container{padding-top:70px}.mdc-top-app-bar{color:#fff}.text-center{text-align:center}.social a{text-decoration:none}
+	</style>
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"></noscript>
+	<link rel="preload" href="bundle.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="bundle.css"></noscript>
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"></noscript>
+	<link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"></noscript>
   </head>
   <body>
     <!--drawer-->
     <aside class="mdc-drawer mdc-drawer--modal">
       <div class="mdc-drawer__header">
-        <h3 class="mdc-drawer__title">Sabbir Ahmad</h3>
-        <h6 class="mdc-drawer__subtitle">sabbir@gskitchen.in</h6>
+        <h3 class="mdc-drawer__title">Quflik</h3>
+        <h6 class="mdc-drawer__subtitle">A beautiful Qur'an app.</h6>
       </div>
       <div class="mdc-drawer__content">
         <nav class="mdc-list">
@@ -33,22 +47,13 @@
             href="#"
             aria-current="page"
           >
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
-              >inbox</i
-            >
-            <span class="mdc-list-item__text">Inbox</span>
+            <span class="mdc-list-item__text">Home</span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
-              >send</i
-            >
-            <span class="mdc-list-item__text">Outgoing</span>
+          <a class="mdc-list-item" href="./about.html">
+            <span class="mdc-list-item__text">About</span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"
-              >drafts</i
-            >
-            <span class="mdc-list-item__text">Drafts</span>
+          <a class="mdc-list-item" href="./contact.html">
+            <span class="mdc-list-item__text">Contact</span>
           </a>
         </nav>
       </div>
@@ -65,23 +70,7 @@
             id="menuButton"
           >
             menu</button
-          ><span class="mdc-top-app-bar__title">GS Kitchen</span>
-        </section>
-        <section
-          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-        >
-          <button
-            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
-            aria-label="Download"
-          >
-            search
-          </button>
-          <button
-            class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded"
-            aria-label="Bookmark this page"
-          >
-            account_circle
-          </button>
+          ><span class="mdc-top-app-bar__title">Quflik</span>
         </section>
       </div>
     </header>
@@ -93,62 +82,83 @@
     <div class="mdc-layout-grid container">
       <div class="mdc-layout-grid__inner">
         <div
-          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop"
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--align-middle"
         >
-          <button
-            class="foo-button mdc-button mdc-button--raised"
-            style="display: none;"
-          >
-            <span class="mdc-button__label">Greate</span>
-          </button>
-          <!-- Login form -->
-          <form action="home.html">
-            <div class="mdc-text-field username">
-              <input
-                type="text"
-                class="mdc-text-field__input"
-                id="username-input"
-                name="username"
-                required
-              />
-              <label class="mdc-floating-label" for="username-input"
-                >Username</label
-              >
-              <div class="mdc-line-ripple"></div>
-            </div>
-            <div class="mdc-text-field password">
-              <input
-                type="password"
-                class="mdc-text-field__input"
-                id="password-input"
-                name="password"
-                required
-                minlength="8"
-              />
-              <label class="mdc-floating-label" for="password-input"
-                >Password</label
-              >
-              <div class="mdc-line-ripple"></div>
-            </div>
-            <div class="button-container">
-              <button
-                type="button"
-                class="mdc-button mdc-button--outlined cancel"
-              >
-                <span class="mdc-button__label">
-                  Cancel
-                </span>
-              </button>
-              <button class="mdc-button mdc-button--raised next">
-                <span class="mdc-button__label">
-                  Next
-                </span>
-              </button>
-            </div>
-            <p style="text-align: center;">
-              Forgot Password? <a href="./recover.html">click here</a>
-            </p>
-          </form>
+          <h1 class="text-center">Quflik</h1>
+          <h3 class="text-center">A beautiful Qur'an app.</h3>
+          <div class="text-center">
+            <svg version="1.1" width="320" height="320" viewBox="0 0 320 320" fill="none" stroke="#000" stroke-linecap="round"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <path id="r1">
+                <animate id="p1" attributeName="d" values="m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="stroke-width" values="0;4;4;4;0" dur="6s" repeatCount="indefinite" begin="p1.begin"/>
+              </path>
+              <path id="r2">
+                <animate attributeName="d" values="m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0" dur="6s" repeatCount="indefinite" begin="p1.begin+1s"/>
+                <animate attributeName="stroke-width" values="0;4;4;4;0" dur="6s" repeatCount="indefinite" begin="p1.begin+1s"/>
+              </path>
+              <path id="r3">
+                <animate attributeName="d" values="m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0" dur="6s" repeatCount="indefinite" begin="p1.begin+2s"/>
+                <animate attributeName="stroke-width" values="0;4;4;4;0" dur="6s" repeatCount="indefinite" begin="p1.begin+2s"/>
+              </path>
+              <path id="r4">
+                <animate id="p1" attributeName="d" values="m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0" dur="6s" repeatCount="indefinite" begin="p1.begin+3s"/>
+                <animate attributeName="stroke-width" values="0;4;4;4;0" dur="6s" repeatCount="indefinite" begin="p1.begin+3s"/>
+              </path>
+              <path id="r5">
+                <animate attributeName="d" values="m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0" dur="6s" repeatCount="indefinite" begin="p1.begin+4s"/>
+                <animate attributeName="stroke-width" values="0;4;4;4;0" dur="6s" repeatCount="indefinite" begin="p1.begin+4s"/>
+              </path>
+              <path id="r6">
+                <animate attributeName="d" values="m160,160l0,0 0,0;m130,110l30,-17 30,17;m130,60l30,-17 30,17;m160,20l0,0 0,0" dur="6s" repeatCount="indefinite" begin="p1.begin+5s"/>
+                <animate attributeName="stroke-width" values="0;4;4;4;0" dur="6s" repeatCount="indefinite" begin="p1.begin+5s"/>
+              </path>
+            </defs>
+            <use xlink:href="#r1"/>
+            <use xlink:href="#r1" transform="rotate(60 160 160)"/>
+            <use xlink:href="#r1" transform="rotate(120 160 160)"/>
+            <use xlink:href="#r1" transform="rotate(180 160 160)"/>
+            <use xlink:href="#r1" transform="rotate(240 160 160)"/>
+            <use xlink:href="#r1" transform="rotate(300 160 160)"/>
+            <use xlink:href="#r2" transform="rotate(30 160 160)"/>
+            <use xlink:href="#r2" transform="rotate(90 160 160)"/>
+            <use xlink:href="#r2" transform="rotate(150 160 160)"/>
+            <use xlink:href="#r2" transform="rotate(210 160 160)"/>
+            <use xlink:href="#r2" transform="rotate(270 160 160)"/>
+            <use xlink:href="#r2" transform="rotate(330 160 160)"/>
+            <use xlink:href="#r3"/>
+            <use xlink:href="#r3" transform="rotate(60 160 160)"/>
+            <use xlink:href="#r3" transform="rotate(120 160 160)"/>
+            <use xlink:href="#r3" transform="rotate(180 160 160)"/>
+            <use xlink:href="#r3" transform="rotate(240 160 160)"/>
+            <use xlink:href="#r3" transform="rotate(300 160 160)"/>
+            <use xlink:href="#r4" transform="rotate(30 160 160)"/>
+            <use xlink:href="#r4" transform="rotate(90 160 160)"/>
+            <use xlink:href="#r4" transform="rotate(150 160 160)"/>
+            <use xlink:href="#r4" transform="rotate(210 160 160)"/>
+            <use xlink:href="#r4" transform="rotate(270 160 160)"/>
+            <use xlink:href="#r4" transform="rotate(330 160 160)"/>
+            <use xlink:href="#r5"/>
+            <use xlink:href="#r5" transform="rotate(60 160 160)"/>
+            <use xlink:href="#r5" transform="rotate(120 160 160)"/>
+            <use xlink:href="#r5" transform="rotate(180 160 160)"/>
+            <use xlink:href="#r5" transform="rotate(240 160 160)"/>
+            <use xlink:href="#r5" transform="rotate(300 160 160)"/>
+            <use xlink:href="#r6" transform="rotate(30 160 160)"/>
+            <use xlink:href="#r6" transform="rotate(90 160 160)"/>
+            <use xlink:href="#r6" transform="rotate(150 160 160)"/>
+            <use xlink:href="#r6" transform="rotate(210 160 160)"/>
+            <use xlink:href="#r6" transform="rotate(270 160 160)"/>
+            <use xlink:href="#r6" transform="rotate(330 160 160)"/>
+          </svg>
+          </div>
+          <p class="text-center">We are working hard to get it online! Send us love on-</p>
+          <div class="text-center social">
+            <a href="https://www.facebook.com/quflik">facebook</a> |
+            <a href="https://www.twitter.com/quflik">twitter</a> |
+            <a href="https://www.instagram.com/quflik">instagram</a>
+        </div>
         </div>
       </div>
     </div>
